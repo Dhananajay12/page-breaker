@@ -11,8 +11,7 @@ const DisplayBox = React.memo(({ text }) => {
 		return words.reduce((result, word, index) => {
 			const wordHeight = word.length * 0.29;
        
-			console.log(wordHeight , word ,  word.length)
-
+			// console.log(wordHeight , word ,  word.length)
 			if (currentBoxHeight + wordHeight <= boxHeight) {
 				currentBox += word + ' ';
 				currentBoxHeight += wordHeight - 0.1;
@@ -33,6 +32,7 @@ const DisplayBox = React.memo(({ text }) => {
 
 	return (
 		<div>
+		<h1 style={{margin:"10px"}}>Page breaker for content</h1>
 			{boxes.map((box, index) => (
 				<div key={index} style={{ width: '500px', height: '500px', border: '1px solid black', margin: '10px', padding: '10px', backgroundColor: '#2191ff', color: "white" }}>
 					{box}
