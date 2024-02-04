@@ -34,7 +34,7 @@ const DisplayBox = React.memo(({ text }) => {
 		<div>
 		<h1 style={{margin:"10px"}}>Page breaker for content</h1>
 			{boxes.map((box, index) => (
-				<div key={index} style={{ width: '500px', height: '500px', border: '1px solid black', margin: '10px', padding: '10px', backgroundColor: '#2191ff', color: "white" }}>
+				<div key={index} style={{ width: '500px', height: '500px', border: '1px solid black', margin: '10px', padding: '5px', backgroundColor: '#2191ff', color: "white" }}>
 					{box}
 				</div>
 			))}
