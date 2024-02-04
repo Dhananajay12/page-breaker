@@ -3,13 +3,13 @@ import React, {  useMemo } from 'react';
 const DisplayBox = React.memo(({ text }) => {
 
 	const boxes = useMemo(() => {
-		const words = text.split(' ');
+		const words = text.split(/\s|\./); 
 		const boxHeight = 500;
 		let currentBox = '';
 		let currentBoxHeight = 0;
 
 		return words.reduce((result, word, index) => {
-			const wordHeight = word.length * 0.29;
+			const wordHeight = word.length * 0.293;
        
 			// console.log(wordHeight , word ,  word.length)
 			if (currentBoxHeight + wordHeight <= boxHeight) {
